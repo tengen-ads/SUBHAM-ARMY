@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AADI ARMY</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#070b12;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.container{
+    width:100%;
+    max-width:380px;
+    text-align:center;
+}
+
+/* TOP BAR */
+.top{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:20px;
+}
+
+.live{
+    background:#0f2;
+    color:#000;
+    padding:5px 12px;
+    border-radius:20px;
+    font-size:12px;
+}
+
+.joined{
+    font-size:12px;
+    color:#aaa;
+}
+
+/* PROFILE */
+.profile{
+    width:110px;
+    height:110px;
+    border-radius:50%;
+    margin:auto;
+    background:url('https://i.imgur.com/your-image.jpg') center/cover;
+    border:3px solid #00eaff;
+    box-shadow:0 0 20px #00eaff;
+}
+
+/* TEXT */
+h1{
+    margin-top:15px;
+    font-size:22px;
+}
+
+.sub{
+    color:#00eaff;
+    font-size:13px;
+    letter-spacing:2px;
+}
+
+.desc{
+    font-size:13px;
+    color:#bbb;
+    margin:10px 0;
+}
+
+/* USERS */
+.users{
+    background:#111722;
+    padding:12px;
+    border-radius:12px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    margin:15px 0;
+}
+
+.circle{
+    width:28px;
+    height:28px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:12px;
+    font-weight:bold;
+    color:black;
+}
+
+.r{background:red;}
+.a{background:orange;}
+.s{background:lime;}
+.k{background:cyan;}
+
+.users span{
+    color:#ccc;
+    font-size:13px;
+}
+
+/* TIMER */
+.timer-text{
+    font-size:12px;
+    color:#aaa;
+}
+
+.timer-text span{
+    color:#00eaff;
+}
+
+.time{
+    font-size:28px;
+    margin:8px 0;
+}
+
+/* PROGRESS */
+.progress{
+    height:6px;
+    background:#222;
+    border-radius:10px;
+    overflow:hidden;
+    margin-bottom:20px;
+}
+
+.bar{
+    height:100%;
+    width:100%;
+    background:linear-gradient(90deg,#00eaff,#00ff88);
+    transition:1s linear;
+}
+
+/* BUTTONS */
+.btn{
+    display:block;
+    width:100%;
+    padding:14px;
+    border-radius:12px;
+    margin:10px 0;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.primary{
+    background:linear-gradient(90deg,#00c6ff,#00eaff);
+    color:black;
+    box-shadow:0 0 15px #00eaff;
+}
+
+.secondary{
+    background:#1a1f2b;
+    color:#ddd;
+}
+
+/* FOOTER */
+.footer{
+    margin-top:15px;
+    font-size:11px;
+    color:#666;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="top">
+        <div class="live">● LIVE NOW</div>
+        <div class="joined">6,501 joined</div>
+    </div>
+
+    <div class="profile"></div>
+
+    <h1>AADI~ARMY</h1>
+    <div class="sub">TENGENADS</div>
+
+    <div class="desc">100% Free Access • Daily Accurate Tips</div>
+
+    <div class="users">
+        <div class="circle r">R</div>
+        <div class="circle a">A</div>
+        <div class="circle s">S</div>
+        <div class="circle k">K</div>
+        <span>Join 6,501+ others today</span>
+    </div>
+
+    <div class="timer-text">LINK EXPIRES IN <span id="seconds">20</span> SECONDS</div>
+    <div class="time" id="time">00:20</div>
+
+    <div class="progress">
+        <div class="bar" id="bar"></div>
+    </div>
+
+    <a href="https://t.me/yourchannel" class="btn primary">JOIN FREE ON TELEGRAM</a>
+    <a href="#" class="btn secondary">🔒 Click Here for Instant Access</a>
+
+    <div class="footer">ADS © TENGENADS</div>
+
+</div>
+
+<script>
+let total = 20;
+let current = total;
+
+let timeEl = document.getElementById("time");
+let secEl = document.getElementById("seconds");
+let bar = document.getElementById("bar");
+
+let interval = setInterval(() => {
+    current--;
+
+    let percent = (current / total) * 100;
+    bar.style.width = percent + "%";
+
+    let display = current < 10 ? "00:0" + current : "00:" + current;
+
+    timeEl.innerText = display;
+    secEl.innerText = current;
+
+    if(current <= 0){
+        clearInterval(interval);
+        window.location.href = "https://t.me/yourchannel";
+    }
+
+},1000);
+</script>
+
+</body>
+</html>
