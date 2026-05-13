@@ -1,260 +1,171 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>𝐒𝐘𝐒𝐓𝐄𝐌 𝐁𝐇𝐀𝐈</title>
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '2719545321735307');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=2719545321735307&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<title>𝟗𝐗 𝐏𝐑𝐎𝐅𝐈𝐓 𝐁𝐘 𝐒𝐘𝐒𝐓𝐄𝐌 𝐁𝐇𝐀𝐈</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
 }
 
 body{
-    background:#070b12;
-    color:white;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
+background:radial-gradient(circle,#0f1030,#02030d);
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:12px;
 }
 
-.container{
-    width:100%;
-    max-width:380px;
-    text-align:center;
+.card{
+width:390px;
+max-width:100%;
+background:linear-gradient(180deg,#111327,#171739);
+border-radius:34px;
+padding:32px 24px 38px;
+text-align:center;
+box-shadow:0 0 40px rgba(0,0,0,.45);
 }
 
-/* TOP BAR */
-.top{
-    display:flex;
-    justify-content:space-between;
-    margin-bottom:20px;
-}
-
-.live{
-    background:#0f2;
-    color:#000;
-    padding:5px 12px;
-    border-radius:20px;
-    font-size:12px;
-}
-
-.joined{
-    font-size:12px;
-    color:#aaa;
-}
-
-/* PROFILE */
 .profile{
-    width:110px;
-    height:110px;
-    border-radius:50%;
-    margin:auto;
-    background:url('https://image2url.com/r2/default/images/1774843825794-56abfff1-78f8-46a9-986c-2b204a2c91f8.jpg') center/cover;
-    border:3px solid #00eaff;
-    box-shadow:0 0 20px #00eaff;
+width:126px;
+height:126px;
+border-radius:50%;
+overflow:hidden;
+margin:auto;
+border:4px solid #00ff8a;
+box-shadow:0 0 25px rgba(0,255,138,.8);
 }
 
-/* TEXT */
-h1{
-    margin-top:15px;
-    font-size:22px;
+.profile img{
+width:100%;
+height:100%;
+object-fit:cover;
 }
 
-.sub{
-    color:#00eaff;
-    font-size:13px;
-    letter-spacing:2px;
+.title{
+margin-top:28px;
+font-size:28px;
+font-weight:800;
+color:#ffb100;
+letter-spacing:-1px;
 }
 
-.desc{
-    font-size:13px;
-    color:#bbb;
-    margin:10px 0;
+.subtitle{
+margin-top:16px;
+font-size:15px;
+font-weight:400;
+line-height:1.55;
+color:#f2f2f2;
 }
 
-/* USERS */
-.users{
-    background:#111722;
-    padding:12px;
-    border-radius:12px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:10px;
-    margin:15px 0;
+.green{
+color:#00f878;
+font-weight:700;
 }
 
-.circle{
-    width:28px;
-    height:28px;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:12px;
-    font-weight:bold;
-    color:black;
+.timer{
+margin-top:28px;
+height:98px;
+border:1px solid rgba(0,255,138,.35);
+border-radius:20px;
+display:flex;
+justify-content:center;
+align-items:center;
+gap:8px;
+font-size:16px;
+font-weight:600;
+color:white;
 }
 
-.r{background:red;}
-.a{background:orange;}
-.s{background:lime;}
-.k{background:cyan;}
-
-.users span{
-    color:#ccc;
-    font-size:13px;
+.timer span{
+font-size:38px;
+font-weight:800;
+color:#ffb100;
 }
 
-/* TIMER */
-.timer-text{
-    font-size:12px;
-    color:#aaa;
-}
-
-.timer-text span{
-    color:#00eaff;
-}
-
-.time{
-    font-size:28px;
-    margin:8px 0;
-}
-
-/* PROGRESS */
-.progress{
-    height:6px;
-    background:#222;
-    border-radius:10px;
-    overflow:hidden;
-    margin-bottom:20px;
-}
-
-.bar{
-    height:100%;
-    width:100%;
-    background:linear-gradient(90deg,#00eaff,#00ff88);
-    transition:1s linear;
-}
-
-/* BUTTONS */
 .btn{
-    display:block;
-    width:100%;
-    padding:14px;
-    border-radius:12px;
-    margin:10px 0;
-    text-decoration:none;
-    font-weight:600;
+margin-top:28px;
+background:#f9a400;
+height:92px;
+border-radius:22px;
+display:flex;
+justify-content:center;
+align-items:center;
+gap:10px;
+font-size:20px;
+font-weight:800;
+color:black;
+text-decoration:none;
+box-shadow:0 8px 0 #cb7400,0 0 30px rgba(255,165,0,.35);
 }
 
-.primary{
-    background:linear-gradient(90deg,#00c6ff,#00eaff);
-    color:black;
-    box-shadow:0 0 15px #00eaff;
-}
-
-.secondary{
-    background:#1a1f2b;
-    color:#ddd;
-}
-
-/* FOOTER */
 .footer{
-    margin-top:15px;
-    font-size:11px;
-    color:#666;
+margin-top:28px;
+font-size:14px;
+font-weight:400;
+line-height:1.7;
+color:#d9d9d9;
 }
 
+.copy{
+margin-top:28px;
+font-size:11px;
+letter-spacing:2px;
+opacity:.55;
+color:#ddd;
+}
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<div class="card">
 
-    <div class="top">
-        <div class="live">● LIVE NOW</div>
-        <div class="joined">6,501 joined</div>
-    </div>
+<div class="profile">
+<img src="https://www.image2url.com/r2/default/images/1778340828610-554d31fc-7e1c-45df-b1cc-ec5b42898556.jpg">
+</div>
 
-    <div class="profile"></div>
+<div class="title">𝟗𝐗 𝐏𝐑𝐎𝐅𝐈𝐓 𝐁𝐘 𝐒𝐘𝐒𝐓𝐄𝐌 𝐁𝐇𝐀𝐈</div>
 
-    <h1>𝟗𝐗 𝐏𝐑𝐎𝐅𝐈𝐓 𝐁𝐘 𝐒𝐘𝐒𝐓𝐄𝐌 𝐁𝐇𝐀𝐈</h1>
-    <div class="sub">TENGENADS</div>
+<div class="subtitle">
+Join the Fast Growing Community<br>
+Get <span class="green">Regular Updates & Insights 🔥</span>
+</div>
 
-    <div class="desc">100% Free Access • Daily Accurate Tips</div>
+<div class="timer">
+⚡ Free access closes in <span id="count">9</span> s
+</div>
 
-    <div class="users">
-        <div class="circle r">R</div>
-        <div class="circle a">A</div>
-        <div class="circle s">S</div>
-        <div class="circle k">K</div>
-        <span>Join 6,501+ others today</span>
-    </div>
+<a class="btn" href="https://t.me/+3ElecVopED42NmRl">
+🚀 JOIN TELEGRAM NOW
+</a>
 
-    <div class="timer-text">LINK EXPIRES IN <span id="seconds">20</span> SECONDS</div>
-    <div class="time" id="time">00:20</div>
+<div class="footer">
+✅ Trusted by Thousands of Members<br>
+🔒 For Educational Purpose Only
+</div>
 
-    <div class="progress">
-        <div class="bar" id="bar"></div>
-    </div>
-
-    <a href="https://t.me/+08HtcRdM5aczMWFl" class="btn primary">JOIN FREE ON TELEGRAM</a>
-    <a href="https://t.me/+08HtcRdM5aczMWFl" class="btn secondary">🔒 Click Here for Instant Access</a>
-
-    <div class="footer">ADS © TENGENADS</div>
+<div class="copy">
+@TENGENADSAGENCY BY TG 
+</div>
 
 </div>
 
 <script>
-let total = 20;
-let current = total;
-
-let timeEl = document.getElementById("time");
-let secEl = document.getElementById("seconds");
-let bar = document.getElementById("bar");
-
-let interval = setInterval(() => {
-    current--;
-
-    let percent = (current / total) * 100;
-    bar.style.width = percent + "%";
-
-    let display = current < 10 ? "00:0" + current : "00:" + current;
-
-    timeEl.innerText = display;
-    secEl.innerText = current;
-
-    if(current <= 0){
-        clearInterval(interval);
-        window.location.href = "https://t.me/+08HtcRdM5aczMWFl";
-    }
-
-},1000);
+let x=9;
+setInterval(()=>{
+if(x>0){
+x--;
+document.getElementById('count').innerHTML=x;
+}
+},1000)
 </script>
 
 </body>
